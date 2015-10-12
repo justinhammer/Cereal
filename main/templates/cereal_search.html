@@ -1,0 +1,18 @@
+<pre>
+Get: {{ request.GET }}
+<br>
+Post: {{ request.POST }}
+<br>
+
+<span>Search:</span>
+<form action="/cereal_search/" method="GET">
+    {% csrf_token %}
+    <input name="cereal" type="text">
+</form>
+
+{% for cereal in cereals %}
+    <a href="/cereal_detail/{{ cereal.pk }}/">{{ cereal.name }}</a>
+    
+{% endfor %}
+<br>
+</pre>

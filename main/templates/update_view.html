@@ -1,0 +1,36 @@
+{% block body %}
+    <form action='/update_view/{{ cereal_object.pk }}/' enctype="multipart/form-date" method='POST'>
+        {% csrf_token %}
+
+
+        <p>
+
+            <input type='text' name='name' value='{{ cereal_object.name }}' />
+
+        </p>
+
+        <p>
+
+            <input type='text' name='hctype' value='{{ cereal_object.hctype }}' />
+
+        </p>
+
+        <p>
+
+            <input type='text' name='calores' value='{{ cereal_object.calories }}' />
+
+        </p>
+
+        <p>
+
+            <input type='submit' value='Update Object' />
+
+        </p>
+
+    </form>
+
+    <p>
+
+    <a href="/cereal_list/">Back to List</a>
+
+{% endblock %}

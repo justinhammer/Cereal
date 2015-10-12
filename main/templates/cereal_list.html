@@ -1,0 +1,11 @@
+<h2>This is a list</br></h2>
+{{ cereals }}</br>
+
+</br>
+
+<h2>This is looping through the list</h2>
+{% for cereal in cereals %}
+    <a href="/cereal_detail/{{ cereal.pk }}/">{{ cereal }}</a>
+    {# <a href="/state_capital_detail/{{state.statecapital.pk}}"> {{state.statecapital.name}} </a> #}
+    </br>
+{% endfor %}
