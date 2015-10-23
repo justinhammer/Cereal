@@ -5,7 +5,7 @@ from main.models import Cereal, Manufacturer
 
 
 class CerealAdmin(admin.ModelAdmin):
-    list_display = ('name', 'hctype', 'calories')
+    list_display = ('name', 'hctype', 'calories', 'manuf')
 
 
 admin.site.register(Cereal, CerealAdmin)

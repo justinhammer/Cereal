@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -26,4 +28,4 @@ urlpatterns = [
     url(r'^create_view1/$', 'main.views.create_view1'),
     url(r'^create_view2/$', 'main.views.create_view2'),
     url(r'^update_view/(?P<pk>\d+)/$', 'main.views.update_view'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

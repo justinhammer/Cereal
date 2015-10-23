@@ -29,6 +29,12 @@ for row in reader:
     new_cereal.manuf = new_manufacturer
     new_cereal.hctype = row['Type']
     new_cereal.calories = row['Calories']
+    new_cereal.protein = row['Protein (g)']
+    new_cereal.fat = row['Fat']
+    new_cereal.sodium = row['Sodium']
+    new_cereal.fiber = row['Dietary Fiber']
+    new_cereal.carbs = row['Carbs']
+    new_cereal.sugars = row['Sugars']
 
     new_cereal.cereal = new_cereal
 
